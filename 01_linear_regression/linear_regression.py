@@ -55,10 +55,11 @@ class LinearRegression:
             # This is the magic - gradient descent
             gradient = (1/m) * X.T.dot(errors)
             self.theta = self.theta - self.lr * gradient
+            theta = self.theta
             
             # Every 100 steps, tell us how we're doing
             if i % 100 == 0:
-                print(f"Iteration {i}, Cost: {cost}")
+                print(f"Iteration {i}, Cost: {cost}, Theta: {theta}")
 
 
 
